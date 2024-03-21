@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/payments?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: adminuser
+    password: password123
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USER}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+jwt:
+  secret: ${JWT_SECRET}
